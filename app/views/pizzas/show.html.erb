@@ -1,0 +1,13 @@
+<div class="pizza_header">
+    <h1>Pizza name: <%= @pizza.name %></h1>
+</div>
+
+<div class="pizza_body">
+  <br>
+  <h3>Ingredients</h3>
+  <h4><%= @pizza.ingredients %></h4>
+  <br>
+  <%= link_to 'Back', :back %>
+  <br>
+  <p><%= link_to "Back to Pizzas Directory", pizzas_path %></p>
+</div>

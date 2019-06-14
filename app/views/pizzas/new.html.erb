@@ -1,0 +1,33 @@
+<div class="new_pizza_header">
+  <h1>New Pizza!!!</h1>
+</div>
+
+<div class="new_pizza_body">
+  <%= form_for @pizza do |f| %>
+    <div class="pizza_form_body">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br>
+
+      <%= f.label :ingredients %>
+      <%= f.text_field :ingredients %>
+      <br>
+
+      <%= f.label :restaurant_id, :Restaurant %>
+      <%= f.select :restaurant_id, @restaurants %>
+      <br>
+
+      <%= f.submit "Create!!!" %>
+    </div>
+    <p><%= link_to "Cancel", pizzas_path %></p>
+  <% end %>
+</div>
+
+<div class="errors">
+  <% if flash[:pizza_errors] %>
+    <h4>You many forget something</h4>
+    <% flash[:pizza_errors].each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+  <% end %>
+</div>
