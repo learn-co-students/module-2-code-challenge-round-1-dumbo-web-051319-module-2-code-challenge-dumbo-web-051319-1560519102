@@ -1,0 +1,5 @@
+<h1 style='font-size:2.8rem'><%= @restaurant.name %></h1><br>
+<h2 style='font-size:1.5rem'><%= @restaurant.address %></h2><br>
+<% @pizzas.each do |pizza| %>
+<h2><%= pizza.name %></h2>
+<% end %>
