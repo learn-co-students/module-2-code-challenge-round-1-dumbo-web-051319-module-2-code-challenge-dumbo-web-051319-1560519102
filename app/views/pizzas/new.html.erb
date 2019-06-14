@@ -1,4 +1,15 @@
 <h1>Create a da pizza pAi!!</h1>
+
+<% if flash[:errors] %>
+  <ul>
+    <% flash[:errors].each do |error| %>
+      <li> ERROR
+        <%= error %>
+      </li>
+      <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @pizza do |f| %>
 
   <%= f.label :name %>

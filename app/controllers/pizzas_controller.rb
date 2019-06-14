@@ -10,7 +10,12 @@ class PizzasController < ApplicationController
   end
   def create
     @pizza = Pizza.create(strong_params)
-    redirect_to pizza_path(@pizza)
+    if @pizza.valid?
+      redirect_to pizza_path(@pizza)
+    else
+      flash[:errors] = @pizza.errors.full_messages
+      redirect_to new_pizza_path
+    end
   end
 
   private
