@@ -1,0 +1,22 @@
+<h1>EDIT PIZZA!!</h1>
+
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |err| %>
+            <li>
+                <%= err %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @pizza do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :ingredients %>
+    <%= f.text_field :ingredients %>
+    <%= f.label :restaurant_id %>
+    <%= f.collection_select :restaurant_id, @restaurant, :id, :name %>
+    <%= f.submit %>
+<% end %>
+
