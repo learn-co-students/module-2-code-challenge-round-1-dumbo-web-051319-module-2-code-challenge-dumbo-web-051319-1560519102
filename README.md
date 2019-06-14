@@ -19,17 +19,25 @@ You've just been hired by the 'NYC Pizza Society' - congratulations! The devoted
 
 Luckily, another developer has already started the job using Rails. We have controllers, models and views to support the creation, listing and displaying of restaurants. Visiting `/restaurants` displays all of the restaurants recorded by members.
 
-Unfortunately, we don't have a way for members to create their favorite pizzas (so, so sad) for each restaurant. **Each Restaurant can have several Pizzas on its menu and each Pizza belongs to the Restaurant**.
+Unfortunately, we don't have a way for members to create their favorite pizzas (so, so sad) for each restaurant.
+**Each Restaurant can have several Pizzas on its menu and each Pizza belongs to the Restaurant**.
 
 ## Instructions / Deliverables
 
 ***To help you complete this assignment we listed the high level steps required to complete this assignment. Read through them carefully to get a sense of the requirements for this code challenge, and then tackle them one by one.***
 
 1. Create the associations between the models. You may have to alter the current schema to get your code working.
+-> either roll back or update with R_ID
+-> migrate
+-> seed
+-> set up relationship in models
 
 2. On the restaurants index page, a restaurant's name should link to the restaurant's show page.
+-> link to restaurant show
+
 
 3. The restaurant show page should include the restaurant's name (eg. PizzArte), its address, and a list of the pizzas it sells. The pizza should link to that pizza's show page.
+
 
 4. The pizza show page should display its name and ingredients.
 
