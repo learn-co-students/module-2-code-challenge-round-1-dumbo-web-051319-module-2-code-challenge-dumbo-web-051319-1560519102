@@ -1,0 +1,8 @@
+<h1>Here is the <%= @restaurant.name %>pizzas!</h1>
+<h1><%= @restaurant.address %></h1>
+<ul>
+  <li>
+    <p>Ingredients: <%= pizza.ingredients %></p>
+    <%= link_to pizza.name, pizza_path(pizza)  %>
+  </li>
+</ul>

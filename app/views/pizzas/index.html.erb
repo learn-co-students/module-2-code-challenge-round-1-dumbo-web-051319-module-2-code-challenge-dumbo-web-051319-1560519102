@@ -5,4 +5,5 @@
       <%= pizza.name %>
   </h1>
   <p>Ingredients: <%= pizza.ingredients %></p>
+      <li><%= link_to pizza.name, pizza_path(pizza)  %></li>
 <% end %>

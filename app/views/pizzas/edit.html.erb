@@ -1,0 +1,9 @@
+<h1>Here is the pizza's edit page!</h1>
+<%= form_for @pizza do |f| %>
+
+  <%= f.text_field :name, placeholder: 'name' %>
+  <%= f.text_area :name %>
+  <%= f.text_field :ingredients, placeholder: 'motto' %>
+  <%= f.text_area :ingredients %>
+  <%= f.collection_select(restaurant_id, @restaurants, :id, :name) %>
+  <%= f.submit %>

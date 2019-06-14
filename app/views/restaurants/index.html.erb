@@ -5,4 +5,7 @@
       <%= restaurant.name %>
   </h1>
   <p>Address: <%= restaurant.address %></p>
+
+  <li><%= link_to restaurant.name, restaurant_path(restaurant)  %></li>
+
 <% end %>
