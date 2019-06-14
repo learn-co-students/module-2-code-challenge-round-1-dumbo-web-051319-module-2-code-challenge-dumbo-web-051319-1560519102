@@ -1,0 +1,19 @@
+<h1 style='margin-top:100px;font-size:2rem'>Pizza Profile</h1>
+
+<h3>Name:  <%= @pizza.name %></h3>
+
+
+<h3>Ingredients:</h3>
+<ul>
+<% @pizza.list_ingredients.each do |ing| %>
+<li><%= ing %></li>
+<% end %>
+</ul>
+
+<br>
+
+<h3>Sold By:  <%= link_to @pizza.restaurant.name, @pizza.restaurant %> </h3>
+
+<br>
+
+<%= button_to "all pizzas", pizzas_path, method: 'get' %>
