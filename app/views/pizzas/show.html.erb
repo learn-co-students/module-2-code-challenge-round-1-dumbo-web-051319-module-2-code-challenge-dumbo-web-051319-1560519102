@@ -1,0 +1,16 @@
+<h1><%= @pizza.name %> Pizza Page </h1>
+
+<h2>Ingredients: <%= @pizza.ingredients %></h2>
+
+<%= link_to "Available at #{@pizza.restaurant.name}", restaurant_path(@pizza.restaurant.id) %>
+<br>
+
+<%= link_to "Update Pizza!", edit_pizza_path %>
+<br>
+<%= button_to "Delete Pizza", pizza_path(@pizza), method: 'delete' %>
+<br>
+
+<br>
+<%= link_to "Pizza Directory", pizzas_path %>
+<br>
+<%= link_to "Restaurant Directory", restaurants_path %>
