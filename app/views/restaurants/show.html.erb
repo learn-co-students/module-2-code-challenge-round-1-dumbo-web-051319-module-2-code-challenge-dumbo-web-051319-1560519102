@@ -1,0 +1,20 @@
+<h1 style='margin-top:100px;font-size:2rem'>Restaurant Profile</h1>
+
+<ul>
+  <li>Name: <%= @restaurant.name %></li>
+  <li>Address: <%= @restaurant.address %></li>
+</ul>
+
+<h3 style='margin-top:100px;font-size:2rem'>Pizza Menu:</h3>
+<% if @restaurant.pizzas.empty? %>
+<p><%= @restaurant.name %> does not have any pizzas yet....</p>
+<% else %>
+<ul>
+  <% @restaurant.pizzas.each do |pizza| %>
+  <li><%= link_to pizza.name, pizza %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<br>
+<%= button_to "all restaurants", restaurants_path, method: 'get' %>
