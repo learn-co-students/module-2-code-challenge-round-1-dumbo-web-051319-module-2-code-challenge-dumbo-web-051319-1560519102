@@ -1,0 +1,16 @@
+<div class="rest_header">
+    <h1><%= @restaurant.name %></h1>
+</div>
+
+<div class="rest_body">
+  <h4><%= @restaurant.address %></h4>
+  <br>
+  <ul>
+    <h5>Menu:</h5>
+    <% @pizzas.each do |pizza| %>
+      <li><%= link_to pizza.name, pizza %></li>
+    <% end %>
+  </ul>
+  <br>
+  <p><%= link_to "Back to Restaurant Directory", restaurants_path %></p>
+</div>
