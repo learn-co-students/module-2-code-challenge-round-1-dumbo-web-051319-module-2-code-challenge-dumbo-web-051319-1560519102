@@ -1,0 +1,43 @@
+
+
+<p><%= @restaurant.name %></p>
+<p><%= @restaurant.address %></p>
+
+<h3>Here are all of the pizzas this restaurant sells</h3>
+
+<%# <% @restaurant.pizzas.each do |pizza| %> %>
+<ol>
+
+<li>
+  <%= @restaurant %>
+</li>
+
+</ol>
+
+<%# <% end  %> %>
+
+<%# <% for some reason it isnt clicking for me to get the restaurant's pizzas to show up so here is what i tried
+
+in rails c
+Restaurant.all - shows all restaurants
+Pizza.all - shows all pizza
+Restaurant.first.pizzas - shows all of the pizzas belonging to the first restaruant
+Pizza.first.restaurant - shows the first restaurant
+
+this is an instance meathod, meaning it has the information that im looking for and it has the relationships im looking for
+
+i put in a byebug inside of the show page of the RestaurantsController and hit it inside of the server. I then began to test the returns from it:
+
+@restaurant.pizzas.name
+
+above is the closest command that should have returned the name of the pizzas belonging to the restaurant but it doesnt. For some reason it returns just Pizza, and I looked at the datatype and it is a string (i believe im doing it from memmory since the server is taking a while to load)
+
+once i had that displayed all i had to do was set up the link_to meadthod and use the path helpers using (rails routes) pizza_path  to set the path of the link to the pizza page
+
+cant think of anything else to test, and didnt look into search bar or creating buttons for the updates. your gonna have to use url
+
+
+
+
+
+ %> %>
