@@ -29,7 +29,7 @@ Unfortunately, we don't have a way for members to create their favorite pizzas (
 
 2. On the restaurants index page, a restaurant's name should link to the restaurant's show page.
 
-3. The restaurant show page should include the restaurant's name (eg. PizzArte), its address, and a list of the pizzas it sells. The pizza should link to that pizza's show page.
+<!-- 3. The restaurant show page should include the restaurant's name (eg. PizzArte), its address, and a list of the pizzas it sells. The pizza should link to that pizza's show page.
 
 4. The pizza show page should display its name and ingredients.
 
@@ -37,4 +37,4 @@ Unfortunately, we don't have a way for members to create their favorite pizzas (
 
 6. I should not be able to create a pizza with the same name as a pizza that already exists.
 
-7. On the restaurant index page, I should be able to see a search bar, and use it to search for a restaurant.
+7. On the restaurant index page, I should be able to see a search bar, and use it to search for a restaurant. -->
