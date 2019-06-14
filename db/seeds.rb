@@ -21,3 +21,11 @@ Restaurant.create!([{
   name: "San Matteo NYC",
   address: "1559 2nd Ave, New York, NY 10028"
 }])
+
+
+
+Pizza.create(name: "PizzaA", ingredients:"Pepperoni", restaurant: Restaurant.first )
+Pizza.create(name: "PizzaB", ingredients:"Cheese", restaurant: Restaurant.first )
+Pizza.create(name: "PizzaC", ingredients:"Sausage", restaurant: Restaurant.second)
+Pizza.create(name: "PizzaD", ingredients:"Peikin Duck", restaurant: Restaurant.second )
+Pizza.create(name: "PizzaE", ingredients:"Pineapple", restaurant: Restaurant.second)
