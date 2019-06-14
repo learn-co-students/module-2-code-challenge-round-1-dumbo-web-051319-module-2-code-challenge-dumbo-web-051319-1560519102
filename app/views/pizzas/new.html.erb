@@ -1,0 +1,23 @@
+<% if flash[:errors]  %>
+  <ul>(Θ︹Θ)ს O no...
+    <% flash[:errors].each do |err| %>
+      <li>
+        <%= err %>
+      </li>
+  </ul>
+  <% end %>
+<% end %>
+<br>
+
+<h1>Create A Pizza!</h1>
+<%= form_for @pizza do |f| %>
+<%= f.label "Name Your Pizza"%>
+  <%= f.text_field :name %><br>
+<%= f.label "Ingredients" %>
+  <%= f.text_field :ingredients %>
+<%= f.label "Restaurant" %>
+  <%= f.collection_select :restaurant_id, @restaurants, :id, :name %>
+<%= f.submit %>
+<% end  %>
+<br>
+<%= button_to "Back to Restaurants", restaurants_path, method: :get %>
