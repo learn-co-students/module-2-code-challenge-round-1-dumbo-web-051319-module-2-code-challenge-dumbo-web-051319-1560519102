@@ -1,0 +1,14 @@
+<h1>Add a New Pizza</h1>
+<%= form_for @pizza do |f| %>
+<%= f.label :Pizza_name %>
+<%= f.text_field :name %>
+<%= f.label :ingredients %>
+<%= f.text_field :ingredients %>
+<%= f.label :restaurant_id %>
+<%# <%= f.collection_sellect : :restuarant_id, Restuarant.all, :id, :name %> %>
+<%= f.submit %>
+<% end %>
+
+<%@pizza.each do |restuarant| %>
+  <li><%= link_to restuarant.name, restuarant %></li>
+<% end %>
