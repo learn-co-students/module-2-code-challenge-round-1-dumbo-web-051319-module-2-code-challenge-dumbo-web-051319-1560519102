@@ -1,0 +1,16 @@
+<h1><%=@restaurant.name%></h1>
+
+<br>
+
+<h2><%= @restaurant.address %></h2>
+<br>
+
+<br>
+<%@restaurant.pizzas.each do |pizza|%>
+            🍕<%=link_to pizza.name, pizza%>🍕
+            <%end%>
+
+
+<!-- associations are off, cannot access the name attribute for pizzas  -->
+
+<!-- 3. The restaurant show page should include the restaurant's name (eg. PizzArte), its address, and a list of the pizzas it sells. The pizza should link to that pizza's show page. -->
