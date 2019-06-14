@@ -1,0 +1,14 @@
+
+<% flash[:errors].each do |error_message|%>
+  <%= error_message %>
+<% end %>
+
+<%= form_for @pizza do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :ingredients %>
+  <%= f.text_field :ingredients %>
+  <%= f.label :restaurant_id %>
+  <%= f.collection_select :restaurant_id, @restaurants, :id, :name %>
+  <%= f.submit %>
+<% end %>
