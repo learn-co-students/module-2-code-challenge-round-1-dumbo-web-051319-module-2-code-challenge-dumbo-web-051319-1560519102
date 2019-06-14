@@ -1,0 +1,6 @@
+<h2>THE BEST PIZZA!!!🍕🍕🍕</h2>
+<h4><%= @pizza.name %> is the yummiest pizza ever made with <%= @pizza.ingredients %></h4>
+<p>Find it at <%= link_to @pizza.restaurant.name, @pizza.restaurant %>
+<br>
+<br>
+<%= link_to "All Pizzas 🍕🍕🍕", pizzas_path %>
