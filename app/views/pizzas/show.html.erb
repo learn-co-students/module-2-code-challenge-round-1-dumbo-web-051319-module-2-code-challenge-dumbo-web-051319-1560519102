@@ -1,0 +1,8 @@
+<h1> <%= @pizzas.name %></h1>
+
+
+<ul>
+  <% @pizzas.each do |pizza| %>
+  <li> <%= pizza.ingredients %></li>
+  <% end %>
+</ul>
