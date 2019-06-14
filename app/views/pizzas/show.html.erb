@@ -1,0 +1,9 @@
+<h1> Order a <%= @pizza.name %> Pizza </h1>
+
+<h3>LIST OF A SINGLE INGREDIENT </h3> 
+<p> I forgot how to splice arrays to actually list stuff T-T </p>
+<%= @pizza.ingredients %>
+
+<br><br><br>
+<h5> Only at <%= link_to @pizza.restaurant.name, restaurant_path %> </h5>
+<h5> <%= link_to "Back to Restaurant Directory", restaurants_path %> </h5>
