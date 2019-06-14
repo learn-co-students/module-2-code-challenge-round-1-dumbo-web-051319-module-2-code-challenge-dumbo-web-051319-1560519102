@@ -1,0 +1,18 @@
+<h1> <%= @restaurant.name %> </h1>
+
+<h4> Address </h4>
+<%= @restaurant.address %>
+
+<h4> Pizza list </h4>
+<ul>
+  <% @pizzas.each do |p| %>
+  <li>
+    <%= link_to p.name, p %>
+  </li>
+  <% end %>
+</ul>
+
+<br>
+<%= button_to "Hungry?", new_pizza_path, method: :get %>
+<br>
+<%= button_to "Back to Restaurants", restaurants_path, method: :get %>
